@@ -4,7 +4,7 @@ import { getIcon } from "./Icons";
 
 export default function StackSection() {
   return (
-    <section id="stack" className="section">
+    <section id="stack" className="section section-white">
       <div className="container">
         <div className="stack-header">
           <div>

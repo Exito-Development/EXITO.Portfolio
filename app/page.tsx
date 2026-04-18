@@ -8,16 +8,16 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  return (
-    <main>
-      <Header />
-      <Hero />
-      <Ticker />
-      <ServicesSection />
-      <StackSection />
-      <ProcessSection />
-      <CtaSection />
-      <Footer />
-    </main>
-  );
+    return (
+        <main>
+            <Header/>
+            <Hero/>
+            <Ticker/>
+            <ServicesSection/>
+            <ProcessSection/>
+            <StackSection/>
+            <CtaSection/>
+            <Footer/>
+        </main>
+    );
 }

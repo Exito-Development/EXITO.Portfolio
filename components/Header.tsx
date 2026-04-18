@@ -7,10 +7,10 @@ export default function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link href="/" className="brand">
-          <BrandLogo size={44} />
+          <BrandLogo size={54} />
           <div>
             <div className="brand-name">{brand.name}</div>
-            <div className="brand-sub">{brand.tagline}</div>
+            {/*<div className="brand-sub">{brand.tagline}</div>*/}
           </div>
         </Link>
 

@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           {/* Brand */}
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <BrandLogo size={40} />
+          <div className="brand-col">
+            <div className="brand-header">
+              <BrandLogo size={74} />
               <div>
                 <div className="footer-brand-name">{brand.name}</div>
                 <div className="footer-brand-sub">{brand.tagline}</div>
@@ -47,17 +47,11 @@ export default function Footer() {
             <div className="footer-col-title">Kontakt</div>
             <div className="footer-links">
               <a href={`mailto:${brand.email}`} className="footer-link">{brand.email}</a>
-              <span className="footer-link">{brand.location}</span>
+              <span className="footer-location">
+                {brand.location} <span style={{ marginLeft: 6, fontSize: '1.2em' }}>🇵🇱</span>
+              </span>
+              <span className="footer-copy">© 2026 {brand.name}</span>
             </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <span className="footer-copy">© 2026 {brand.name}</span>
-          <div className="footer-tech">
-            {["React", "TypeScript", "Kubernetes"].map((t) => (
-              <span key={t}>{t}</span>
-            ))}
           </div>
         </div>
       </div>

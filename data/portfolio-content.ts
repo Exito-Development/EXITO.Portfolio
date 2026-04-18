@@ -6,7 +6,7 @@
 export const brand = {
   name: "Exito Development",
   tagline: "Modern Digital Systems",
-  email: "hello@exito.dev",
+  email: "b.l@exito-development.pl",
   location: "Warsaw, Poland",
   calLink: "https://cal.com",
 } as const;

@@ -1,5 +1,5 @@
 import { brand } from "@/data/portfolio-content";
-import { IconSend, IconArrowRight } from "./Icons";
+import { IconSend } from "./Icons";
 import RevealWrapper from "./RevealWrapper";
 
 export default function CtaSection() {
@@ -21,14 +21,6 @@ export default function CtaSection() {
               <a href={`mailto:${brand.email}`} className="btn-pill-white">
                 <IconSend size={14} />
                 {brand.email}
-              </a>
-              <a
-                href={brand.calLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-pill-outline"
-              >
-                Zarezerwuj call <IconArrowRight size={12} />
               </a>
             </div>
           </div>

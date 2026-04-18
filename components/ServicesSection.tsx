@@ -4,13 +4,13 @@ import { getIcon } from "./Icons";
 
 export default function ServicesSection() {
   return (
-    <section id="oferta" className="section">
+    <section id="oferta" className="section section-white">
       <div className="container">
         <RevealWrapper>
           <span className="eyebrow">Oferta</span>
         </RevealWrapper>
         <RevealWrapper delay={0.1}>
-          <h2 className="section-h2" style={{ marginBottom: 40 }}>Co budujemy</h2>
+          <h2 className="section-h2" style={{ marginBottom: 40 }}>Co tworzymy</h2>
         </RevealWrapper>
 
         <div className="services-grid">

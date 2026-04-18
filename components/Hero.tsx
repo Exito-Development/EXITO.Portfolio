@@ -26,7 +26,7 @@ export default function Hero() {
               transition={{ duration: 0.6, ease }}
             >
               <span className="live-dot" />
-              Dostępny — nowe projekty Q3 2026
+              PREMIUM SOFTWARE DEVELOPMENT
             </motion.div>
 
             <motion.h1
