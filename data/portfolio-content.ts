@@ -12,9 +12,9 @@ export const brand = {
 } as const;
 
 export const stats = [
-  { value: 32, suffix: "+", label: "Projektów" },
-  { value: 7,  suffix: "",  label: "Lat exp." },
-  { value: 18, suffix: "+", label: "Klientów" },
+  { value: 2,  suffix: "",  label: "Duże projekty" },
+  { value: 8,  suffix: "+", label: "Lat exp." },
+  { value: 100, suffix: "%", label: "Dostarczone" },
 ] as const;
 
 export const services = [
@@ -129,22 +129,28 @@ export const tickerItems = [
 
 export const panelActivity = [
   {
-    title: "Platforma sprzedażowa B2B — sprint #8 zakończony",
-    meta: "2 godz. temu · React, Node.js, PostgreSQL",
-    badge: "Deployed",
-    icon: "file-text",
+    title: "Platforma B2B — Faza utrzymania i rozwoju",
+    meta: "Monitoring aktywny · Java, Spring, Next.js",
+    badge: "Live",
+    icon: "shield",
   },
   {
-    title: "Konfigurator produktów — code review",
-    meta: "5 godz. temu · Next.js, Zustand, TypeScript",
-    badge: "Review",
-    icon: "clock",
+    title: "Kreator Kart Menu — Dostarczone i aktywne",
+    meta: "Zakończono prace · Next.js, PostgreSQL, Java",
+    badge: "Live",
+    icon: "check-circle",
   },
   {
-    title: "Aplikacja mobilna iOS — beta release",
-    meta: "wczoraj · React Native, Expo, Supabase",
-    badge: "Beta",
-    icon: "trending-up",
+    title: "Aplikacja mobilna B2B - W trakcie",
+    meta: "Q3 2026 · Flutter, Java",
+    badge: "Upcoming",
+    icon: "plus",
+  },
+  {
+    title: "Inteligentny monitoring krów",
+    meta: "Q4 2026 MVP · Java, IoT, AI, Next.js, AWS",
+    badge: "Upcoming",
+    icon: "plus",
   },
 ];
 

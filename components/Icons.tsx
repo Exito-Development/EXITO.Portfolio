@@ -168,6 +168,24 @@ export function IconTrendingUp({ size = 14, className = "" }: IconProps) {
   );
 }
 
+export function IconCheckCircle({ size = 14, className = "" }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...strokeProps}>
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+  );
+}
+
+export function IconPlus({ size = 14, className = "" }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...strokeProps}>
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  );
+}
+
 export function IconMail({ size = 16, className = "" }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...strokeProps}>
@@ -203,6 +221,8 @@ export function getIcon(name: string, size = 18) {
     box:          <IconBox size={size} />,
     "file-text":  <IconFileText size={size} />,
     "trending-up":<IconTrendingUp size={size} />,
+    "check-circle":<IconCheckCircle size={size} />,
+    plus:         <IconPlus size={size} />,
   };
   return map[name] ?? null;
 }

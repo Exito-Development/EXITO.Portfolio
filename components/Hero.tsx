@@ -99,10 +99,10 @@ export default function Hero() {
               {/* KPI 2x2 */}
               <div className="panel-kpis">
                 {[
-                  { val: "14",   lbl: "Aktywne projekty",  delta: "+3 ten kwartał" },
-                  { val: "98%",  lbl: "Uptime SLA",         delta: "30-dniowa śr." },
-                  { val: "2.4s", lbl: "Śr. deploy",         delta: "CI/CD pipeline" },
-                  { val: "4.9",  lbl: "Ocena klientów",     delta: "12 opinii" },
+                  { val: "2",    lbl: "Zrealizowane projekty", delta: "100% dostarczone" },
+                  { val: "100%", lbl: "Zadowolenia",           delta: "Feedback 5/5" },
+                  { val: "24/7", lbl: "Wsparcie techniczne",  delta: "Opieka nad kodem" },
+                  { val: "2",    lbl: "Zadowolonych klientów"},
                 ].map((kpi) => (
                   <div key={kpi.lbl} className="panel-kpi">
                     <div className="pkpi-val">{kpi.val}</div>
