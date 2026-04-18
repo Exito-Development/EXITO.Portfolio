@@ -42,7 +42,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Terminal */}
-          <RevealWrapper delay={0.2}>
+          <RevealWrapper delay={0.2} style={{ height: '100%' }}>
             <div className="terminal">
               <div className="terminal-bar">
                 <span className="tbar-dot" />

@@ -3,7 +3,7 @@
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
-interface Props { children: React.ReactNode; delay?: number; className?: string; }
+interface Props { children: React.ReactNode; delay?: number; className?: string; style?: React.CSSProperties; }
 
 const variants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -13,12 +13,13 @@ const variants: Variants = {
   }),
 };
 
-export default function RevealWrapper({ children, delay = 0, className = "" }: Props) {
+export default function RevealWrapper({ children, delay = 0, className = "", style = {} }: Props) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.12 });
   return (
     <motion.div ref={ref} className={className} variants={variants}
-      initial="hidden" animate={inView ? "visible" : "hidden"} custom={delay}>
+      initial="hidden" animate={inView ? "visible" : "hidden"} custom={delay}
+      style={style}>
       {children}
     </motion.div>
   );
