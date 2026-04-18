@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect width="400" height="400" fill="black"/>
+
+  <!-- White circle r=80 -->
+  <circle cx="200" cy="200" r="80" fill="white"/>
+
+  <!-- Top-left cutout touching top-left corner of square (164,164) -->
+  <path d="M 164,164 L 164,120 A 80,80 0 0,0 120,164 Z" fill="black"/>
+
+  <!-- Bottom-right cutout touching bottom-right corner of square (236,236) -->
+  <path d="M 236,236 L 236,280 A 80,80 0 0,0 280,236 Z" fill="black"/>
+
+  <!-- Central black square 72x72 -->
+  <rect x="164" y="164" width="72" height="72" fill="black"/>
+</svg>

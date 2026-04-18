@@ -5,6 +5,11 @@ import OrbBackground from "@/components/OrbBackground";
 export const metadata: Metadata = {
   title: "Exito Development — Modern Digital Systems",
   description: "Platformy sprzedażowe, konfiguratory produktów, aplikacje mobilne i infrastruktura cloud-native.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
