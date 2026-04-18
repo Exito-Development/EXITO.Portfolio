@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Exito Development — Modern Digital Systems
 
-## Getting Started
+Oficjalne portfolio firmy **Exito Development**, specjalizującej się w budowaniu zaawansowanych systemów cyfrowych, platform B2B oraz dedykowanych rozwiązań enterprise.
 
-First, run the development server:
+## 🚀 O projekcie
 
+Strona portfolio została zbudowana w oparciu o **Next.js**, prezentując ofertę, stos technologiczny oraz podejście procesowe firmy. Projekt kładzie nacisk na nowoczesny design, wydajność oraz przejrzystą prezentację usług.
+
+## 🛠 Nasze Usługi
+
+- **Platformy sprzedażowe B2B** — Zaawansowane systemy e-commerce z integracją ERP.
+- **Konfiguratory produktów** — Interaktywne narzędzia z logiką biznesową i wyceną w czasie rzeczywistym.
+- **Aplikacje mobilne** — Natywne rozwiązania iOS i Android (React Native).
+- **API & Backend systemowy** — Skalowalne architektury REST i GraphQL.
+- **Infrastruktura & DevOps** — Cloud-native, CI/CD, konteneryzacja (Docker/Kubernetes).
+- **Projekty długoterminowe** — Wsparcie jako zewnętrzny CTO i mentoring zespołów.
+
+## 💻 Stack Technologiczny
+
+Projekt i realizacje firmy opierają się na sprawdzonych technologiach:
+- **Frontend/Fullstack:** Next.js, React.js, TypeScript, Tailwind CSS
+- **Backend:** Java Spring Boot, Node.js
+- **Bazy danych:** PostgreSQL
+- **Mobile:** React Native
+- **Infrastruktura:** AWS, Docker, Kubernetes, GitHub Actions
+
+## ⚙️ Rozpoczęcie pracy (Development)
+
+Projekt jest aplikacją [Next.js](https://nextjs.org) stworzoną przy użyciu `create-next-app`.
+
+### Wymagania
+- Node.js (najnowsza wersja stabilna)
+- npm / yarn / pnpm
+
+### Instalacja
+
+1. Sklonuj repozytorium:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [adres-repozytorium]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Zainstaluj zależności:
+```bash
+npm install
+# lub
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Uruchom serwer deweloperski:
+```bash
+npm run dev
+# lub
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce, aby zobaczyć efekt.
 
-## Learn More
+## 📝 Konfiguracja treści
 
-To learn more about Next.js, take a look at the following resources:
+Główna treść strony (usługi, statystyki, stack) znajduje się w pliku:
+`data/portfolio-content.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Wszelkie zmiany w tym pliku są automatycznie odzwierciedlane w odpowiednich sekcjach strony.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📬 Kontakt
 
-## Deploy on Vercel
+- **WWW:** [exito-development.pl](https://exito-development.pl)
+- **Email:** b.l@exito-development.pl
+- **Lokalizacja:** Warszawa, Polska
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+© 2026 Exito Development
