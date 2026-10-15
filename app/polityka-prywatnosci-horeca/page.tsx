@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -10,16 +9,16 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyHorecaPage() {
   return (
-    <main>
-      <Header />
+    <>
+      <main id="main" className="legal">
+        <div className="wrap section-grid">
+          <p className="section-label t-label">Aplikacja mobilna Horeca</p>
+          <div className="section-title legal-head">
+            <h1 className="t-heading-1">Polityka prywatności</h1>
+            <p className="t-muted">Ostatnia aktualizacja: 21.07.2026</p>
+          </div>
 
-      <section className="legal-section section-white">
-        <div className="container legal-container">
-          <div className="eyebrow">Aplikacja mobilna Horeca</div>
-          <h1 className="section-h2 legal-h1">Polityka prywatności</h1>
-          <p className="legal-updated">Ostatnia aktualizacja: 21.07.2026</p>
-
-          <div className="legal-content">
+          <div className="section-body legal-content">
             <h2>1. Administrator danych</h2>
             <p>
               Administratorem danych osobowych przetwarzanych w związku z korzystaniem
@@ -58,45 +57,47 @@ export default function PrivacyPolicyHorecaPage() {
             </p>
 
             <h2>3. Jakie dane przetwarzamy</h2>
-            <table className="legal-table">
-              <thead>
-                <tr>
-                  <th>Kategoria danych</th>
-                  <th>Cel</th>
-                  <th>Podstawa prawna</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Adres e-mail i dane logowania</td>
-                  <td>Uwierzytelnienie i dostęp do konta</td>
-                  <td>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</td>
-                </tr>
-                <tr>
-                  <td>
-                    Dane konta biznesowego (nazwa firmy, dane kontrahenta, historia
-                    zamówień)
-                  </td>
-                  <td>Realizacja zamówień hurtowych, obsługa relacji handlowej</td>
-                  <td>Wykonanie umowy</td>
-                </tr>
-                <tr>
-                  <td>Token sesji</td>
-                  <td>
-                    Utrzymanie zalogowania między uruchomieniami aplikacji
-                  </td>
-                  <td>Uzasadniony interes — bezpieczeństwo i wygoda korzystania</td>
-                </tr>
-                <tr>
-                  <td>
-                    Zdjęcia wybrane z galerii urządzenia (opcjonalnie, np. przy
-                    tworzeniu pakietów)
-                  </td>
-                  <td>Funkcje związane z obsługą oferty produktowej</td>
-                  <td>Zgoda (dostęp do galerii wymaga potwierdzenia użytkownika)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="legal-table-wrap">
+              <table className="legal-table">
+                <thead>
+                  <tr>
+                    <th>Kategoria danych</th>
+                    <th>Cel</th>
+                    <th>Podstawa prawna</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Adres e-mail i dane logowania</td>
+                    <td>Uwierzytelnienie i dostęp do konta</td>
+                    <td>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Dane konta biznesowego (nazwa firmy, dane kontrahenta, historia
+                      zamówień)
+                    </td>
+                    <td>Realizacja zamówień hurtowych, obsługa relacji handlowej</td>
+                    <td>Wykonanie umowy</td>
+                  </tr>
+                  <tr>
+                    <td>Token sesji</td>
+                    <td>
+                      Utrzymanie zalogowania między uruchomieniami aplikacji
+                    </td>
+                    <td>Uzasadniony interes — bezpieczeństwo i wygoda korzystania</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Zdjęcia wybrane z galerii urządzenia (opcjonalnie, np. przy
+                      tworzeniu pakietów)
+                    </td>
+                    <td>Funkcje związane z obsługą oferty produktowej</td>
+                    <td>Zgoda (dostęp do galerii wymaga potwierdzenia użytkownika)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>
               Aplikacja <strong>nie zbiera</strong> danych lokalizacyjnych, nie
               korzysta z narzędzi analitycznych ani śledzących firm trzecich, nie ma
@@ -186,9 +187,8 @@ export default function PrivacyPolicyHorecaPage() {
             </p>
           </div>
         </div>
-      </section>
-
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

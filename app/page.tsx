@@ -1,23 +1,27 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Ticker from "@/components/Ticker";
+import ClientsSection from "@/components/ClientsSection";
 import ServicesSection from "@/components/ServicesSection";
-import StackSection from "@/components/StackSection";
+import WorkSection from "@/components/WorkSection";
+import CooperationSection from "@/components/CooperationSection";
 import ProcessSection from "@/components/ProcessSection";
-import CtaSection from "@/components/CtaSection";
+import FaqSection from "@/components/FaqSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-    return (
-        <main>
-            <Header/>
-            <Hero/>
-            <Ticker/>
-            <ServicesSection/>
-            <ProcessSection/>
-            <StackSection/>
-            <CtaSection/>
-            <Footer/>
-        </main>
-    );
+  return (
+    <>
+      <main id="main">
+        <Hero />
+        <ClientsSection />
+        <ServicesSection />
+        <WorkSection />
+        <CooperationSection />
+        <ProcessSection />
+        <FaqSection />
+        <ContactSection />
+      </main>
+      <Footer variant="home" />
+    </>
+  );
 }

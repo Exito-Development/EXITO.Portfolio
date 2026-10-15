@@ -57,10 +57,22 @@ Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce, aby zoba
 
 ## 📝 Konfiguracja treści
 
-Główna treść strony (usługi, statystyki, stack) znajduje się w pliku:
+Główna treść strony (usługi, realizacje, współpraca, proces, FAQ, case studies) znajduje się w pliku:
 `data/portfolio-content.ts`
 
 Wszelkie zmiany w tym pliku są automatycznie odzwierciedlane w odpowiednich sekcjach strony.
+Wartości w `[NAWIASACH]` (logotypy klientów, NIP, wyniki i cytat w case study, kwoty w FAQ) to miejsca do uzupełnienia przed publikacją. Zrzuty ekranu podpina się polem `image` (ścieżka w `/public`).
+
+## 🎨 Design i ruch
+
+Wygląd opiera się na design systemie **Exito** (monochrom, DM Sans + JetBrains Mono, siatka 12 kolumn). Tokeny są zmiennymi CSS w `app/globals.css`, z wariantem ciemnym wg `prefers-color-scheme`.
+
+- Smooth scroll: Lenis (`components/SmoothScroll.tsx`)
+- Wejścia sekcji: GSAP ScrollTrigger + SplitText, deklarowane atrybutami `data-reveal="lines" | "fade"` i `data-media` (`components/ScrollReveals.tsx`)
+- Key visual: pole punktów w three.js / React Three Fiber (`components/PointField.tsx`)
+- Przejścia stron: React `<ViewTransition>` (`experimental.viewTransition` w `next.config.ts`)
+
+Wszystkie animacje respektują `prefers-reduced-motion`.
 
 ## 📬 Kontakt
 

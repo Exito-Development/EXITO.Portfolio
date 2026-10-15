@@ -1,30 +1,49 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import BrandLogo from "./BrandLogo";
-import { navLinks, brand } from "@/data/portfolio-content";
+import MobileMenu from "./MobileMenu";
+import NavAnchor from "./NavAnchor";
+import { ArrowUpRight } from "./Icons";
+import { brand, navLinks } from "@/data/portfolio-content";
 
 export default function Header() {
-  return (
-    <header className="header">
-      <div className="container header-inner">
-        <Link href="/" className="brand">
-          <BrandLogo size={54} />
-          <div>
-            <div className="brand-name">{brand.name}</div>
-            {/*<div className="brand-sub">{brand.tagline}</div>*/}
-          </div>
-        </Link>
+  const pathname = usePathname();
+  const onHome = pathname === "/";
+  const inWork = pathname.startsWith("/realizacje");
 
-        <nav className="nav">
+  const brandContent = (
+    <>
+      <BrandLogo className="brand-mark" />
+      <span className="brand-word">{brand.name}</span>
+    </>
+  );
+
+  return (
+    <header className="site-header">
+      <div className="wrap">
+        {onHome ? (
+          <a href="#top" className="brand">{brandContent}</a>
+        ) : (
+          <Link href="/" className="brand">{brandContent}</Link>
+        )}
+
+        <nav className="site-nav" aria-label="Nawigacja główna">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="nav-link">
+            <NavAnchor
+              key={link.id}
+              section={link.id}
+              className="link-draw"
+              aria-current={inWork && link.id === "realizacje" ? "true" : undefined}
+            >
               {link.label}
-            </Link>
+              {link.id === "kontakt" && <ArrowUpRight size={14} />}
+            </NavAnchor>
           ))}
         </nav>
 
-        <Link href="#kontakt" className="btn-pill-white">
-          Kontakt
-        </Link>
+        <MobileMenu />
       </div>
     </header>
   );

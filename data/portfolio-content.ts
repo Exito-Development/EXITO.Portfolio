@@ -1,157 +1,242 @@
 // ─────────────────────────────────────────────────────────
 // Exito Development — content model
-// Edytuj tutaj, zmiany trafiają automatycznie do wszystkich sekcji
+// Edytuj tutaj, zmiany trafiają automatycznie do wszystkich sekcji.
+// Wartości w [NAWIASACH] to miejsca do uzupełnienia przed publikacją.
 // ─────────────────────────────────────────────────────────
 
 export const brand = {
   name: "Exito Development",
-  tagline: "Modern Digital Systems",
+  descriptor: "Software engineering studio",
   email: "b.l@exito-development.pl",
-  location: "Warsaw, Poland",
-  calLink: "https://cal.com",
+  location: "Warszawa, Polska",
+  nip: "[NUMER]",
+  url: "https://exito-development.pl",
 } as const;
 
-export const stats = [
-  { value: 2,  suffix: "",  label: "Duże projekty" },
-  { value: 8,  suffix: "+", label: "Lat exp." },
-  { value: 100, suffix: "%", label: "Dostarczone" },
-] as const;
-
-export const services = [
-  {
-    number: "01",
-    title: "Platformy sprzedażowe B2B",
-    description:
-      "Zaawansowane systemy e-commerce i marketplace z logiką cenową, zarządzaniem kontrahentami, integracją ERP i panelami analitycznymi w czasie rzeczywistym.",
-    tags: ["Next.js", "Java", "PostgreSQL", "SAP ERP"],
-    icon: "monitor",
-  },
-  {
-    number: "02",
-    title: "Konfiguratory produktów",
-    description:
-      "Interaktywne konfiguratory z logiką reguł biznesowych, wizualizacją, wyceną w locie i eksportem ofert. Zintegrowane z systemami CRM i ERP klienta.",
-    tags: ["Next.js", "Three.js", "TypeScript", "CRM"],
-    icon: "tag",
-  },
-  {
-    number: "03",
-    title: "Aplikacje mobilne",
-    description:
-      "Natywne aplikacje iOS i Android w React Native. Od onboardingu po zaawansowane funkcje offline-first — z pełnym CI/CD i automatycznym release pipeline.",
-    tags: ["React Native", "iOS", "Android"],
-    icon: "smartphone",
-  },
-  {
-    number: "04",
-    title: "API & Backend systemowy",
-    description:
-      "Skalowalne API REST i GraphQL, event-driven architecture. Projektujemy z myślą o setkach tysięcy requestów dziennie i pełnej obserwowalności.",
-    tags: ["Java", "Spring Boot", "GraphQL", "Kafka"],
-    icon: "bar-chart",
-  },
-  {
-    number: "05",
-    title: "Infrastruktura & DevOps",
-    description:
-      "Architektura cloud-native, serwery on-premise, pipeline CI/CD, monitoring i alerting, konteneryzacja Docker. Zero downtime deployment jako standard, nie wyjątek.",
-    tags: ["Docker", "AWS", "GitHub Actions", "Jenkins"],
-    icon: "shield",
-  },
-  {
-    number: "06",
-    title: "Projekty długoterminowe",
-    description:
-      "Współpraca jako zewnętrzny CTO lub dedicated team. Planowanie roadmapy, zarządzanie architekturą i mentoring wewnętrznych zespołów przez cały cykl życia produktu.",
-    tags: ["CTO as a Service", "Team Lead", "Roadmapa"],
-    icon: "clock",
-  },
-] as const;
-
-export const stack = [
-  { name: "React.js",     role: "Frontend",      icon: "layers" },
-  { name: "Next.js",      role: "Fullstack",     icon: "package" },
-  { name: "TypeScript",   role: "Language",      icon: "code" },
-  { name: "Node.js",      role: "Backend",       icon: "globe" },
-  { name: "Java Spring",  role: "Enterprise",    icon: "grid" },
-  { name: "PostgreSQL",   role: "Database",      icon: "database" },
-  { name: "Kubernetes",   role: "Orchestration", icon: "box" },
-  { name: "React Native", role: "Mobile",        icon: "smartphone" },
-] as const;
-
-export const processSteps = [
-  {
-    num: "01",
-    title: "Discovery & Architektura",
-    desc: "Analizujemy wymagania, mapujemy procesy biznesowe, proponujemy architekturę. Decyzje poparte analizą.",
-  },
-  {
-    num: "02",
-    title: "Iteracyjne wdrożenie",
-    desc: "Sprinty dwutygodniowe, continuous delivery, demo po każdym etapie. Klient widzi postęp od pierwszego tygodnia.",
-  },
-  {
-    num: "03",
-    title: "QA & Performance",
-    desc: "Automatyczne testy, load testing, security audit przed każdym release. Nie dostarczamy czegoś, czego sami byśmy nie użyli.",
-  },
-  {
-    num: "04",
-    title: "Stabilizacja & Przekazanie",
-    desc: "Dokumentacja, szkolenie zespołu, monitoring od dnia 1 produkcji. Pełna obsługa trakcie utrzymania produktu.",
-  },
-] as const;
-
 export const navLinks = [
-  { label: "Oferta",     href: "#oferta" },
-  { label: "Stack",      href: "#stack" },
-  { label: "Podejście",  href: "#podejscie" },
-  { label: "Kontakt",    href: "#kontakt" },
+  { label: "Usługi", id: "uslugi" },
+  { label: "Realizacje", id: "realizacje" },
+  { label: "Współpraca", id: "wspolpraca" },
+  { label: "Proces", id: "proces" },
+  { label: "Kontakt", id: "kontakt" },
 ] as const;
 
-export const footerOferta = [
-  "Platformy sprzedażowe",
-  "Kreatory i konfiguratory",
-  "Web i mobile",
-];
+export const hero = {
+  title: "Oprogramowanie dla firm, które planują rosnąć.",
+  lead: "Projektujemy, budujemy i utrzymujemy platformy B2B, aplikacje mobilne i infrastrukturę cloud dla firm, które potrzebują jakości klasy enterprise.",
+  cta: "Rozpocznij projekt",
+  facts: ["Warszawa, Polska", "Enterprise · B2B", "Java · Next.js · Mobile", "Cloud & DevOps"],
+} as const;
 
-export const footerTech = [
-  "Java / Spring",
-  "React / Next.js",
-  "PostgreSQL / CI/CD",
-];
+export const clients = {
+  label: "Zaufali nam",
+  // Podmień `name` na nazwę klienta i dodaj `logo` (ścieżka w /public), aby pokazać logotyp.
+  items: [
+    { name: "[LOGO KLIENTA]" },
+    { name: "[LOGO KLIENTA]" },
+    { name: "[LOGO KLIENTA]" },
+    { name: "[LOGO KLIENTA]" },
+  ] as { name: string; logo?: string }[],
+};
 
-export const tickerItems = [
-  "Java", "Spring Boot", "React.js", "Next.js", "PostgreSQL",
-  "Kubernetes", "React Native", "TypeScript", "Node.js", "AWS",
-  "GraphQL", "CI/CD", "Terraform", "Kafka",
-];
+export const services = {
+  label: "(01) Usługi",
+  title: "Od architektury po utrzymanie produkcji. Jeden partner za cały cykl życia produktu.",
+  items: [
+    {
+      number: "01",
+      title: "Platformy sprzedażowe B2B",
+      description: "Logika cenowa, kontrahenci, integracja z ERP, analityka w czasie rzeczywistym.",
+      tags: "Next.js · SAP",
+    },
+    {
+      number: "02",
+      title: "Konfiguratory produktów",
+      description: "Reguły biznesowe, wizualizacja, wycena w locie i eksport ofert do CRM.",
+      tags: "TypeScript · 3D",
+    },
+    {
+      number: "03",
+      title: "Aplikacje mobilne",
+      description: "iOS i Android, offline-first, z automatycznym procesem wydań.",
+      tags: "React Native",
+    },
+    {
+      number: "04",
+      title: "API i systemy backendowe",
+      description: "REST, GraphQL, architektura zdarzeniowa. Skalowalność i obserwowalność.",
+      tags: "Java · Kafka",
+    },
+    {
+      number: "05",
+      title: "Infrastruktura i DevOps",
+      description: "Cloud-native lub on-premise, CI/CD, monitoring, wdrożenia bez przestojów.",
+      tags: "AWS · K8s",
+    },
+  ],
+} as const;
 
-export const panelActivity = [
-  {
-    title: "Platforma B2B — Faza utrzymania i rozwoju",
-    meta: "Monitoring aktywny · Java, Spring, Next.js",
-    badge: "Live",
-    icon: "shield",
+export type Project = {
+  title: string;
+  caption: string;
+  media: string;
+  /** Slug strony case study w /realizacje/[slug]. */
+  slug?: string;
+  /** Zrzut ekranu w /public, zastępuje placeholder. */
+  image?: string;
+};
+
+export const work = {
+  label: "(02) Realizacje",
+  title: "Wybrane projekty.",
+  cursor: "Zobacz",
+  items: [
+    {
+      title: "Platforma zamówień B2B",
+      caption: "Dystrybucja · HoReCa · 2025",
+      media: "[ ZRZUT EKRANU ]",
+      slug: "platforma-b2b",
+    },
+    { title: "Kreator Kart Menu", caption: "Gastronomia · 2025", media: "[ ZRZUT EKRANU ]" },
+    { title: "Aplikacja mobilna B2B", caption: "W realizacji", media: "[ MOCKUP MOBILE ]" },
+    { title: "Monitoring stada — IoT i AI", caption: "AgriTech · MVP 2026", media: "[ DASHBOARD / ZDJĘCIE ]" },
+  ] as Project[],
+};
+
+export const cooperation = {
+  label: "(03) Współpraca",
+  title: "Trzy modele. Dopasowane do etapu, na którym jest Twoja firma.",
+  items: [
+    {
+      title: "Projekt",
+      description: "Zdefiniowany zakres, harmonogram i budżet. Od discovery do wdrożenia na produkcję.",
+    },
+    {
+      title: "Zespół dedykowany",
+      description: "Inżynierowie pracujący w Twoim rytmie, rozliczani miesięcznie, skalowani wraz z potrzebą.",
+    },
+    {
+      title: "CTO as a Service",
+      description: "Roadmapa, decyzje architektoniczne i mentoring wewnętrznego zespołu.",
+    },
+  ],
+} as const;
+
+export const workProcess = {
+  label: "(04) Proces",
+  title: "Przewidywalnie, iteracyjnie, transparentnie.",
+  steps: [
+    { number: "01", title: "Discovery", description: "Procesy, wymagania i architektura, zanim powstanie linia kodu." },
+    { number: "02", title: "Iteracje", description: "Dwutygodniowe sprinty i demo po każdym etapie." },
+    { number: "03", title: "Jakość", description: "Testy automatyczne, load testing, audyt bezpieczeństwa." },
+    { number: "04", title: "Utrzymanie", description: "Monitoring, dokumentacja i rozwój po starcie." },
+  ],
+} as const;
+
+export const faq = {
+  label: "(05) FAQ",
+  title: "Najczęstsze pytania.",
+  items: [
+    {
+      question: "Ile kosztuje realizacja projektu?",
+      answer:
+        "Każdy projekt wyceniamy indywidualnie. Po krótkiej rozmowie discovery przygotowujemy estymację w widełkach i harmonogram etapów. Orientacyjnie: MVP od [KWOTA] PLN netto.",
+    },
+    {
+      question: "Jak długo trwa stworzenie platformy lub aplikacji?",
+      answer:
+        "Pierwsza działająca wersja (MVP) powstaje zwykle w [X–Y] tygodni. Postęp widzisz od pierwszego sprintu — demo co dwa tygodnie.",
+    },
+    {
+      question: "Kto jest właścicielem kodu?",
+      answer:
+        "Ty. Po odbiorze i rozliczeniu przenosimy na klienta pełne autorskie prawa majątkowe do kodu oraz dostęp do repozytorium i infrastruktury.",
+    },
+    {
+      question: "Czy podpisujecie NDA?",
+      answer: "Tak. Umowę o poufności podpisujemy przed rozmową o szczegółach projektu.",
+    },
+    {
+      question: "Czy przejmujecie istniejące systemy?",
+      answer:
+        "Tak. Zaczynamy od audytu kodu i architektury, potem modernizujemy etapami — bez przestojów. Integrujemy się z istniejącymi systemami, w tym z SAP ERP.",
+    },
+    {
+      question: "Co dzieje się po wdrożeniu?",
+      answer:
+        "Oferujemy utrzymanie i dalszy rozwój: monitoring, aktualizacje bezpieczeństwa i wsparcie w ramach ustalonego SLA.",
+    },
+  ],
+} as const;
+
+export const contact = {
+  label: "(06) Kontakt",
+  title: "Porozmawiajmy o Twoim projekcie.",
+  note: "Odpowiadamy w ciągu jednego dnia roboczego.",
+  form: {
+    name: "Imię i firma",
+    email: "E-mail",
+    message: "O projekcie",
+    submit: "Wyślij zapytanie",
+    sent: "Otwieramy Twój program pocztowy z gotową wiadomością.",
+    subject: "Zapytanie ze strony",
   },
+} as const;
+
+export type CaseStudy = {
+  slug: string;
+  index: string;
+  title: string;
+  summary: string;
+  meta: { label: string; value: string }[];
+  cover: string;
+  results: { value: string; label: string }[];
+  story: { label: string; lead: string; body: string }[];
+  gallery: { media: string; wide: boolean }[];
+  quote: { label: string; text: string; author: string };
+  stack: string[];
+};
+
+export const caseStudies: CaseStudy[] = [
   {
-    title: "Kreator Kart Menu — Dostarczone i aktywne",
-    meta: "Zakończono prace · Next.js, PostgreSQL, Java",
-    badge: "Live",
-    icon: "check-circle",
-  },
-  {
-    title: "Aplikacja mobilna B2B - W trakcie",
-    meta: "Q3 2026 · Flutter, Java",
-    badge: "Upcoming",
-    icon: "plus",
-  },
-  {
-    title: "Inteligentny monitoring krów",
-    meta: "Q4 2026 MVP · Java, IoT, AI, Next.js, AWS",
-    badge: "Upcoming",
-    icon: "plus",
+    slug: "platforma-b2b",
+    index: "01",
+    title: "Platforma zamówień B2B zintegrowana z SAP.",
+    summary:
+      "Platforma webowa i aplikacja mobilna, w których kontrahent widzi swoje ceny, składa zamówienie i śledzi jego status.",
+    meta: [
+      { label: "Klient", value: "[NAZWA KLIENTA]" },
+      { label: "Branża", value: "Dystrybucja · HoReCa" },
+      { label: "Zakres", value: "Architektura, backend, web, mobile, integracja ERP" },
+      { label: "Status", value: "Na produkcji, w rozwoju" },
+    ],
+    cover: "[ GŁÓWNY ZRZUT EKRANU PLATFORMY ]",
+    results: [
+      { value: "[X%]", label: "[zamówień składanych online]" },
+      { value: "[X min]", label: "[średni czas złożenia zamówienia]" },
+      { value: "[X]", label: "[aktywnych kontrahentów]" },
+    ],
+    story: [
+      {
+        label: "(01) Wyzwanie",
+        lead: "Klienci biznesowi zamawiali telefonicznie i mailowo, a każde zamówienie trzeba było ręcznie przenosić do SAP.",
+        body: "[Opisz skalę problemu: liczbę zamówień, błędy przy przepisywaniu, czas pracy handlowców, brak wglądu klienta w ceny i dostępność.]",
+      },
+      {
+        label: "(02) Rozwiązanie",
+        lead: "Platforma webowa i aplikacja mobilna, w których kontrahent widzi swoje ceny, składa zamówienie i śledzi jego status.",
+        body: "Backend w Java i Spring Boot synchronizuje ceny, stany i zamówienia z SAP ERP. [Dopisz kluczowe decyzje architektoniczne i funkcje, np. cenniki indywidualne, pakiety produktowe.]",
+      },
+    ],
+    gallery: [
+      { media: "[ ZRZUT — PANEL ZAMÓWIEŃ ]", wide: true },
+      { media: "[ MOCKUP — APLIKACJA MOBILNA ]", wide: false },
+    ],
+    quote: {
+      label: "(03) Efekt",
+      text: "„[Cytat klienta o efekcie współpracy — jedno, dwa zdania.]”",
+      author: "[Imię Nazwisko], [Stanowisko], [Firma]",
+    },
+    stack: ["Java", "Spring Boot", "Next.js", "React Native", "PostgreSQL", "SAP ERP"],
   },
 ];
-
-export const sparklineData = [38, 42, 36, 55, 48, 52, 61, 58, 66, 72, 69, 78];
