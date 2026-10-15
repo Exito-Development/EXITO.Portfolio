@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import BrandLogo from "./BrandLogo";
+import BrandLogo, { Wordmark } from "./BrandLogo";
 import MobileMenu from "./MobileMenu";
 import NavAnchor from "./NavAnchor";
 import { ArrowUpRight } from "./Icons";
-import { brand, navLinks } from "@/data/portfolio-content";
+import { navLinks } from "@/data/portfolio-content";
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,7 +16,7 @@ export default function Header() {
   const brandContent = (
     <>
       <BrandLogo className="brand-mark" />
-      <span className="brand-word">{brand.name}</span>
+      <Wordmark />
     </>
   );
 

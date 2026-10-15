@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import BrandLogo from "./BrandLogo";
+import BrandLogo, { Wordmark } from "./BrandLogo";
 import NavAnchor from "./NavAnchor";
 import { CloseIcon, MenuIcon } from "./Icons";
 import { brand, navLinks } from "@/data/portfolio-content";
@@ -34,7 +34,7 @@ export default function MobileMenu() {
         <div className="wrap menu-top">
           <span className="brand">
             <BrandLogo className="brand-mark" />
-            <span className="brand-word">{brand.name}</span>
+            <Wordmark />
           </span>
           <button type="button" className="menu-button" aria-label="Zamknij menu" onClick={close}>
             <CloseIcon size={22} />

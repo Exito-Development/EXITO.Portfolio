@@ -14,8 +14,13 @@ function supportsWebGL() {
   }
 }
 
-// Key visual slot: a surface well that lazily mounts the 3D point field after first paint.
-export default function KeyVisual() {
+interface Props {
+  /** "slot" — surface well under the hero; "background" — full-bleed field behind the hero copy. */
+  variant?: "slot" | "background";
+}
+
+// Lazily mounts the 3D point field after first paint.
+export default function KeyVisual({ variant = "slot" }: Props) {
   const [mounted, setMounted] = useState(false);
   const [ready, setReady] = useState(false);
 
@@ -29,9 +34,11 @@ export default function KeyVisual() {
     return () => clearTimeout(id);
   }, []);
 
+  const className = variant === "background" ? "hero-field" : "key-visual";
+
   return (
-    <div className={`key-visual${ready ? " is-ready" : ""}`} aria-hidden="true">
-      {mounted && <PointField onReady={() => setReady(true)} />}
+    <div className={`${className}${ready ? " is-ready" : ""}`} aria-hidden="true">
+      {mounted && <PointField variant={variant} onReady={() => setReady(true)} />}
     </div>
   );
 }

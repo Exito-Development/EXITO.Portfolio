@@ -26,6 +26,8 @@ export const hero = {
   lead: "Projektujemy, budujemy i utrzymujemy platformy B2B, aplikacje mobilne i infrastrukturę cloud dla firm, które potrzebują jakości klasy enterprise.",
   cta: "Rozpocznij projekt",
   facts: ["Warszawa, Polska", "Enterprise · B2B", "Java · Next.js · Mobile", "Cloud & DevOps"],
+  // Pole punktów 3D: "background" — tło za tekstem hero, "slot" — osobny blok pod hero (jak w designie).
+  visual: "background" as "background" | "slot",
 } as const;
 
 export const clients = {

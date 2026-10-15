@@ -3,9 +3,12 @@ import { ArrowRight } from "./Icons";
 import { brand, hero } from "@/data/portfolio-content";
 
 export default function Hero() {
+  const fieldBehind = hero.visual === "background";
+
   return (
     <>
-      <section id="top" className="hero" aria-labelledby="hero-title">
+      <section id="top" className={`hero${fieldBehind ? " hero--field" : ""}`} aria-labelledby="hero-title">
+        {fieldBehind && <KeyVisual variant="background" />}
         <div className="wrap">
           <h1 id="hero-title" className="hero-title t-display-xl" data-reveal="lines">
             {hero.title}
@@ -20,7 +23,7 @@ export default function Hero() {
       </section>
 
       <div className="wrap">
-        <KeyVisual />
+        {!fieldBehind && <KeyVisual />}
         <ul className="facts t-label" aria-label="W skrócie">
           {hero.facts.map((fact) => (
             <li key={fact}>{fact}</li>

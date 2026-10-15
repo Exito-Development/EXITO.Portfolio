@@ -68,11 +68,12 @@ interface FieldProps {
   cols: number;
   rows: number;
   size: number;
+  opacity: number;
   animate: boolean;
   dark: boolean;
 }
 
-function Field({ cols, rows, size, animate, dark }: FieldProps) {
+function Field({ cols, rows, size, opacity, animate, dark }: FieldProps) {
   const outer = useRef<THREE.Group>(null);
   const inner = useRef<THREE.Points>(null);
   const material = useRef<THREE.ShaderMaterial>(null);
@@ -124,6 +125,7 @@ function Field({ cols, rows, size, animate, dark }: FieldProps) {
     const dt = Math.min(delta, 0.05);
     u.uSize.value = size * state.viewport.dpr;
     u.uColor.value.set(ink.current);
+    u.uOpacity.value = opacity;
     if (!animate) return;
 
     u.uTime.value += dt;
@@ -157,7 +159,25 @@ function Field({ cols, rows, size, animate, dark }: FieldProps) {
   );
 }
 
-export default function PointField({ onReady }: { onReady?: () => void }) {
+// Grid density, point size and alpha per placement. Behind text the field is finer and
+// lighter, so copy stays readable — especially on phones, where near points get large.
+const PRESETS = {
+  slot: {
+    desktop: { cols: 120, rows: 60, size: 16, opacity: 0.6 },
+    mobile: { cols: 60, rows: 30, size: 20, opacity: 0.6 },
+  },
+  background: {
+    desktop: { cols: 120, rows: 60, size: 16, opacity: 0.5 },
+    mobile: { cols: 90, rows: 45, size: 12, opacity: 0.35 },
+  },
+};
+
+interface Props {
+  variant?: keyof typeof PRESETS;
+  onReady?: () => void;
+}
+
+export default function PointField({ variant = "slot", onReady }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(true);
   const reduced = useMediaQuery("(prefers-reduced-motion: reduce)");
@@ -173,6 +193,7 @@ export default function PointField({ onReady }: { onReady?: () => void }) {
   }, []);
 
   const frameloop = reduced ? "demand" : inView ? "always" : "never";
+  const preset = PRESETS[variant][mobile ? "mobile" : "desktop"];
 
   return (
     <div ref={ref} style={{ position: "absolute", inset: 0 }}>
@@ -185,9 +206,10 @@ export default function PointField({ onReady }: { onReady?: () => void }) {
         onCreated={() => onReady?.()}
       >
         <Field
-          cols={mobile ? 60 : 120}
-          rows={mobile ? 30 : 60}
-          size={mobile ? 20 : 16}
+          cols={preset.cols}
+          rows={preset.rows}
+          size={preset.size}
+          opacity={preset.opacity}
           animate={!reduced}
           dark={dark}
         />

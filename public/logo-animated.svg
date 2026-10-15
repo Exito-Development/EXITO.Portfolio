@@ -1,0 +1,65 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated Exito Development mark — a looping version of logo.svg.
+       Cycle (6s): spins in, the square opens, the wedges bite the corners,
+       holds, turns half a turn (the mark lands on itself), then dissolves. -->
+  <style>
+    .body {
+      transform-box: view-box;
+      transform-origin: 50% 50%;
+      animation: body 6s infinite;
+    }
+    .square {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: square 6s infinite;
+    }
+    .tl { animation: tl 6s infinite; }
+    .br { animation: br 6s infinite; }
+
+    @keyframes body {
+      0%   { transform: rotate(-180deg) scale(0.6); opacity: 0; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+      8%   { opacity: 1; }
+      22%  { transform: rotate(0deg) scale(1); opacity: 1; }
+      58%  { transform: rotate(0deg) scale(1); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+      74%  { transform: rotate(180deg) scale(1); }
+      88%  { transform: rotate(180deg) scale(1); opacity: 1; animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+      100% { transform: rotate(180deg) scale(0.6); opacity: 0; }
+    }
+    @keyframes square {
+      0%, 6%   { transform: scale(0); animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+      18%, 86% { transform: scale(1); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+      96%, 100% { transform: scale(0); }
+    }
+    @keyframes tl {
+      0%, 12%  { transform: translate(-56px, -56px); animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+      24%, 84% { transform: translate(0, 0); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+      94%, 100% { transform: translate(-56px, -56px); }
+    }
+    @keyframes br {
+      0%, 13%  { transform: translate(56px, 56px); animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+      25%, 85% { transform: translate(0, 0); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+      95%, 100% { transform: translate(56px, 56px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .body, .square, .tl, .br { animation: none; }
+    }
+  </style>
+
+  <!-- Black background -->
+  <rect width="400" height="400" fill="black"/>
+
+  <g class="body">
+    <!-- White circle r=80 -->
+    <circle cx="200" cy="200" r="80" fill="white"/>
+
+    <!-- Top-left cutout touching top-left corner of square (164,164) -->
+    <path class="tl" d="M 164,164 L 164,120 A 80,80 0 0,0 120,164 Z" fill="black"/>
+
+    <!-- Bottom-right cutout touching bottom-right corner of square (236,236) -->
+    <path class="br" d="M 236,236 L 236,280 A 80,80 0 0,0 280,236 Z" fill="black"/>
+
+    <!-- Central black square 72x72 -->
+    <rect class="square" x="164" y="164" width="72" height="72" fill="black"/>
+  </g>
+</svg>
