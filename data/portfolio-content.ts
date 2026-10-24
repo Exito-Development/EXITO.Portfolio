@@ -32,12 +32,11 @@ export const hero = {
 
 export const clients = {
   label: "Zaufali nam",
-  // Podmień `name` na nazwę klienta i dodaj `logo` (ścieżka w /public), aby pokazać logotyp.
+  // `logo`: PNG z przezroczystym tłem w /public/clients — wyświetlany jednokolorowo (kolor muted).
+  // Siatka dopasowuje się do liczby pozycji (do 4 w rzędzie), więc nowego klienta dodajesz jedną linią.
   items: [
-    { name: "[LOGO KLIENTA]" },
-    { name: "[LOGO KLIENTA]" },
-    { name: "[LOGO KLIENTA]" },
-    { name: "[LOGO KLIENTA]" },
+    { name: "CEDC International", logo: "/clients/cedc.png" },
+    { name: "Grupa Maspex", logo: "/clients/maspex.png" },
   ] as { name: string; logo?: string }[],
 };
 
@@ -49,13 +48,13 @@ export const services = {
       number: "01",
       title: "Platformy sprzedażowe B2B",
       description: "Logika cenowa, kontrahenci, integracja z ERP, analityka w czasie rzeczywistym.",
-      tags: "Next.js · SAP",
+      tags: "Next.js · Java · SAP",
     },
     {
       number: "02",
       title: "Konfiguratory produktów",
       description: "Reguły biznesowe, wizualizacja, wycena w locie i eksport ofert do CRM.",
-      tags: "TypeScript · 3D",
+      tags: "Next.js · 3D",
     },
     {
       number: "03",
@@ -99,7 +98,12 @@ export const work = {
       media: "[ ZRZUT EKRANU ]",
       slug: "platforma-b2b",
     },
-    { title: "Kreator Kart Menu", caption: "Gastronomia · 2025", media: "[ ZRZUT EKRANU ]" },
+    {
+      title: "Kreator Kart Menu",
+      caption: "Gastronomia · 2025",
+      media: "[ ZRZUT EKRANU ]",
+      image: "/work/kreator-kart-menu.webp",
+    },
     { title: "Aplikacja mobilna B2B", caption: "W realizacji", media: "[ MOCKUP MOBILE ]" },
     { title: "Monitoring stada — IoT i AI", caption: "AgriTech · MVP 2026", media: "[ DASHBOARD / ZDJĘCIE ]" },
   ] as Project[],

@@ -382,9 +382,11 @@ html:has(dialog[open]) { overflow: hidden; }
    CLIENTS
 ════════════════════════════════════ */
 .clients { padding-top: clamp(80px, 8.3vw, 120px); }
-.clients .section-grid { align-items: center; }
+@media (min-width: 1024px) {
+  .clients .section-grid { align-items: center; }
+}
 .clients-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(var(--cols-sm, 2), minmax(0, 1fr));
   gap: 16px;
 }
 .client-logo {
@@ -393,9 +395,14 @@ html:has(dialog[open]) { overflow: hidden; }
   border: 1px solid var(--hairline);
   font-size: 11px;
 }
-.client-logo img { max-height: 32px; width: auto; }
+.client-mark {
+  width: 70%; max-width: 168px; height: 36px;
+  background-color: currentColor;
+  -webkit-mask: var(--logo) center / contain no-repeat;
+          mask: var(--logo) center / contain no-repeat;
+}
 @media (min-width: 768px) {
-  .clients-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-gutter); }
+  .clients-grid { grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); gap: var(--space-gutter); }
 }
 
 /* ════════════════════════════════════
